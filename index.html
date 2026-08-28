@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>जन दिशा न्यूज़</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: #111;
+            color: white;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+        }
+
+        /* Header */
+        header {
+            background: white;
+            padding: 20px 5%;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .logo span {
+            color: #e21b23;
+        }
+
+        .tagline {
+            margin-top: 5px;
+            color: #555;
+        }
+
+        /* Navigation */
+        nav {
+            background: #111;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            font-weight: bold;
+        }
+
+        nav ul li a:hover {
+            background: #e21b23;
+        }
+
+        /* Breaking News */
+        .breaking {
+            background: white;
+            margin: 15px 5%;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .breaking-title {
+            background: #e21b23;
+            color: white;
+            padding: 12px 20px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .breaking-text {
+            padding: 12px 20px;
+            white-space: nowrap;
+        }
+
+        /* Main Content */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .welcome {
+            background: white;
+            padding: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .welcome h1 {
+            color: #e21b23;
+            margin-bottom: 10px;
+        }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+
+            .top-bar {
+                font-size: 11px;
+            }
+
+            .logo {
+                font-size: 36px;
+            }
+
+            nav ul {
+                justify-content: flex-start;
+            }
+
+            nav ul li a {
+                padding: 10px 12px;
+                font-size: 14px;
+            }
+
+            .breaking {
+                margin: 10px 2%;
+            }
+
+            .container {
+                width: 96%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div>शुक्रवार, 28 अगस्त 2026</div>
+        <div>आज की ताज़ा खबरें</div>
+    </div>
+
+
+    <!-- Header -->
+    <header>
+
+        <div class="logo">
+            जन <span>दिशा</span>
+        </div>
+
+        <div class="tagline">
+            हर खबर, आपके लिए
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <nav>
+        <ul>
+
+            <li><a href="#">होम</a></li>
+            <li><a href="#">देश</a></li>
+            <li><a href="#">विदेश</a></li>
+            <li><a href="#">उत्तर प्रदेश</a></li>
+            <li><a href="#">शहर/जिला</a></li>
+            <li><a href="#">राजनीति</a></li>
+            <li><a href="#">बिजनेस</a></li>
+            <li><a href="#">खेल</a></li>
+            <li><a href="#">मनोरंजन</a></li>
+            <li><a href="#">टेक्नोलॉजी</a></li>
+
+        </ul>
+    </nav>
+
+
+    <!-- Breaking News -->
+    <div class="breaking">
+
+        <div class="breaking-title">
+            🔴 BREAKING NEWS
+        </div>
+
+        <div class="breaking-text">
+            बड़ी खबर: देश और दुनिया की सभी ताज़ा खबरें यहां पढ़ें
+        </div>
+
+    </div>
+
+
+    <!-- Main Content -->
+    <div class="container">
+
+        <div class="welcome">
+
+            <h1>जन दिशा न्यूज़ में आपका स्वागत है</h1>
+
+            <p>
+                देश, दुनिया, उत्तर प्रदेश, खेल, बिजनेस और मनोरंजन
+                की ताज़ा खबरें सबसे पहले।
+            </p>
+
+        </div>
+
+    </div>
+
+
+</body>
+</html>
