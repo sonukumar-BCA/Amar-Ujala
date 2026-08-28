@@ -1514,5 +1514,325 @@
 }
 
 </style>
+    <!-- ================= PART 6 ================= -->
+
+<!-- SEARCH BOX -->
+
+<div class="search-section">
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="newsSearch"
+            placeholder="🔍 खबर खोजें..."
+        >
+
+        <button onclick="searchNews()">
+            खोजें
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- LIVE DATE & TIME -->
+
+<div class="live-time">
+
+    <span>🔴 LIVE</span>
+
+    <span id="currentDateTime">
+        समय लोड हो रहा है...
+    </span>
+
+</div>
+
+
+<!-- BACK TO TOP BUTTON -->
+
+<button
+    id="backToTop"
+    onclick="scrollToTop()"
+    title="ऊपर जाएं">
+    ↑
+</button>
+
+
+<!-- PART 6 CSS -->
+
+<style>
+
+.search-section {
+
+    background: white;
+
+    padding: 20px;
+
+    margin: 20px 0;
+
+    display: flex;
+
+    justify-content: center;
+
+}
+
+
+.search-box {
+
+    width: 100%;
+
+    max-width: 650px;
+
+    display: flex;
+
+}
+
+
+.search-box input {
+
+    flex: 1;
+
+    padding: 14px;
+
+    border: 1px solid #ccc;
+
+    border-right: none;
+
+    outline: none;
+
+    font-size: 16px;
+
+    border-radius: 4px 0 0 4px;
+
+}
+
+
+.search-box button {
+
+    background: #e21b23;
+
+    color: white;
+
+    border: none;
+
+    padding: 0 25px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    border-radius: 0 4px 4px 0;
+
+}
+
+
+.search-box button:hover {
+
+    background: #b9151b;
+
+}
+
+
+/* LIVE TIME */
+
+.live-time {
+
+    background: #111;
+
+    color: white;
+
+    padding: 8px 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 13px;
+
+}
+
+
+.live-time span:first-child {
+
+    color: #ff3030;
+
+    font-weight: bold;
+
+}
+
+
+/* BACK TO TOP */
+
+#backToTop {
+
+    position: fixed;
+
+    right: 20px;
+
+    bottom: 25px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #e21b23;
+
+    color: white;
+
+    font-size: 25px;
+
+    cursor: pointer;
+
+    display: none;
+
+    z-index: 999;
+
+}
+
+
+#backToTop:hover {
+
+    background: #111;
+
+}
+
+
+/* MOBILE */
+
+@media (max-width: 480px) {
+
+    .search-section {
+
+        padding: 12px;
+
+    }
+
+    .search-box input {
+
+        font-size: 14px;
+
+        padding: 12px;
+
+    }
+
+    .search-box button {
+
+        padding: 0 15px;
+
+        font-size: 14px;
+
+    }
+
+    .live-time {
+
+        font-size: 11px;
+
+    }
+
+}
+
+</style>
+
+
+<!-- PART 6 JAVASCRIPT -->
+
+<script>
+
+function updateDateTime() {
+
+    const now = new Date();
+
+    const options = {
+
+        weekday: "long",
+
+        day: "numeric",
+
+        month: "long",
+
+        year: "numeric",
+
+        hour: "2-digit",
+
+        minute: "2-digit",
+
+        second: "2-digit"
+
+    };
+
+    document.getElementById("currentDateTime").innerText =
+        now.toLocaleString("hi-IN", options);
+
+}
+
+
+updateDateTime();
+
+setInterval(updateDateTime, 1000);
+
+
+/* SEARCH */
+
+function searchNews() {
+
+    const searchText =
+        document.getElementById("newsSearch").value
+        .toLowerCase()
+        .trim();
+
+    if (searchText === "") {
+
+        alert("कृपया खबर का नाम लिखें।");
+
+        return;
+
+    }
+
+    alert("आपने खोजा: " + searchText);
+
+}
+
+
+/* BACK TO TOP */
+
+window.onscroll = function() {
+
+    const button =
+        document.getElementById("backToTop");
+
+    if (document.documentElement.scrollTop > 300) {
+
+        button.style.display = "block";
+
+    } else {
+
+        button.style.display = "none";
+
+    }
+
+};
+
+
+function scrollToTop() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+</script>
 </body>
 </html>
