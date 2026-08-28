@@ -427,7 +427,375 @@
 
         </div>
 
+    </div><!-- PART 3 : LATEST NEWS -->
+
+<div class="latest-section">
+
+    <div class="section-title">
+        <h2>ताज़ा खबरें</h2>
+        <a href="#">और देखें →</a>
     </div>
+
+    <div class="latest-grid">
+
+        <!-- News 1 -->
+        <div class="latest-card">
+
+            <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2"
+                 alt="देश की खबर">
+
+            <span class="category">देश</span>
+
+            <h3>
+                देश से जुड़ी आज की सबसे बड़ी खबर, जानिए पूरी जानकारी
+            </h3>
+
+            <p>🕐 1 घंटे पहले</p>
+
+        </div>
+
+
+        <!-- News 2 -->
+        <div class="latest-card">
+
+            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+                 alt="उत्तर प्रदेश खबर">
+
+            <span class="category">उत्तर प्रदेश</span>
+
+            <h3>
+                उत्तर प्रदेश में आज का बड़ा अपडेट, लोगों के लिए अहम खबर
+            </h3>
+
+            <p>🕐 2 घंटे पहले</p>
+
+        </div>
+
+
+        <!-- News 3 -->
+        <div class="latest-card">
+
+            <img src="https://images.unsplash.com/photo-1535320903710-d993d3d77d29"
+                 alt="बिजनेस खबर">
+
+            <span class="category">बिजनेस</span>
+
+            <h3>
+                शेयर बाजार में बड़ा बदलाव, निवेशकों के लिए जरूरी खबर
+            </h3>
+
+            <p>🕐 3 घंटे पहले</p>
+
+        </div>
+
+
+        <!-- News 4 -->
+        <div class="latest-card">
+
+            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211"
+                 alt="खेल खबर">
+
+            <span class="category">खेल</span>
+
+            <h3>
+                क्रिकेट में शानदार मुकाबला, टीम ने हासिल की बड़ी जीत
+            </h3>
+
+            <p>🕐 4 घंटे पहले</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PART 3 : CATEGORY SECTION -->
+
+<div class="category-section">
+
+    <div class="section-title">
+        <h2>उत्तर प्रदेश</h2>
+        <a href="#">और देखें →</a>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-news">
+
+            <img src="https://images.unsplash.com/photo-1595658658481-d53d3f999875"
+                 alt="उत्तर प्रदेश">
+
+            <h3>
+                उत्तर प्रदेश में विकास कार्यों को लेकर बड़ा अपडेट
+            </h3>
+
+            <p>🕐 5 घंटे पहले</p>
+
+        </div>
+
+
+        <div class="category-news">
+
+            <img src="https://images.unsplash.com/photo-1590479773265-7464e5d48118"
+                 alt="लखनऊ">
+
+            <h3>
+                राजधानी से आई बड़ी खबर, प्रशासन ने लिया अहम फैसला
+            </h3>
+
+            <p>🕐 6 घंटे पहले</p>
+
+        </div>
+
+
+        <div class="category-news">
+
+            <img src="https://images.unsplash.com/photo-1548013146-72479768bada"
+                 alt="वाराणसी">
+
+            <h3>
+                वाराणसी में पर्यटन को लेकर नई योजना की शुरुआत
+            </h3>
+
+            <p>🕐 7 घंटे पहले</p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- PART 3 CSS -->
+
+<style>
+
+    .latest-section,
+    .category-section {
+
+        background: white;
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+    }
+
+
+    .section-title {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 3px solid #e21b23;
+
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+
+    }
+
+
+    .section-title h2 {
+
+        color: #e21b23;
+        font-size: 26px;
+
+    }
+
+
+    .section-title a {
+
+        color: #e21b23;
+        text-decoration: none;
+        font-weight: bold;
+
+    }
+
+
+    .latest-grid {
+
+        display: grid;
+
+        grid-template-columns:
+        repeat(4, 1fr);
+
+        gap: 18px;
+
+    }
+
+
+    .latest-card {
+
+        border: 1px solid #ddd;
+        background: white;
+
+        overflow: hidden;
+
+        transition: 0.3s;
+
+    }
+
+
+    .latest-card:hover {
+
+        transform: translateY(-5px);
+
+        box-shadow:
+        0 5px 15px rgba(0,0,0,0.15);
+
+    }
+
+
+    .latest-card img {
+
+        width: 100%;
+        height: 170px;
+
+        object-fit: cover;
+
+    }
+
+
+    .latest-card .category {
+
+        margin: 10px;
+
+    }
+
+
+    .latest-card h3 {
+
+        padding: 0 10px;
+
+        font-size: 18px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .latest-card p {
+
+        padding: 10px;
+
+        color: #777;
+
+        font-size: 13px;
+
+    }
+
+
+    /* Category */
+
+    .category-grid {
+
+        display: grid;
+
+        grid-template-columns:
+        repeat(3, 1fr);
+
+        gap: 20px;
+
+    }
+
+
+    .category-news {
+
+        border: 1px solid #ddd;
+
+        background: white;
+
+        overflow: hidden;
+
+    }
+
+
+    .category-news img {
+
+        width: 100%;
+
+        height: 200px;
+
+        object-fit: cover;
+
+    }
+
+
+    .category-news h3 {
+
+        padding: 12px;
+
+        font-size: 20px;
+
+        line-height: 1.4;
+
+    }
+
+
+    .category-news p {
+
+        padding: 0 12px 12px;
+
+        color: #777;
+
+        font-size: 13px;
+
+    }
+
+
+    /* Mobile */
+
+    @media (max-width: 768px) {
+
+        .latest-grid {
+
+            grid-template-columns: 1fr 1fr;
+
+        }
+
+
+        .category-grid {
+
+            grid-template-columns: 1fr;
+
+        }
+
+
+        .latest-card img {
+
+            height: 130px;
+
+        }
+
+
+        .latest-card h3 {
+
+            font-size: 16px;
+
+        }
+
+
+        .section-title h2 {
+
+            font-size: 22px;
+
+        }
+
+    }
+
+
+    @media (max-width: 480px) {
+
+        .latest-grid {
+
+            grid-template-columns: 1fr;
+
+        }
+
+    }
+
+        </style>
 
 
 </body>
